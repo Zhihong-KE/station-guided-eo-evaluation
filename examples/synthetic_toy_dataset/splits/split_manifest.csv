@@ -1,0 +1,5 @@
+protocol,path,n_records,n_station_years,n_stations
+random_record_seed42,examples/synthetic_toy_dataset/splits/protocol_random_record_seed42.csv,361,36,12
+station_year_seed42,examples/synthetic_toy_dataset/splits/protocol_station_year_seed42.csv,361,36,12
+station_isolated_seed42,examples/synthetic_toy_dataset/splits/protocol_station_isolated_seed42.csv,361,36,12
+temporal_holdout_2021,examples/synthetic_toy_dataset/splits/protocol_temporal_holdout_2021.csv,361,36,12

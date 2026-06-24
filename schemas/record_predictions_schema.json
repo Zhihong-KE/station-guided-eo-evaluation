@@ -1,0 +1,28 @@
+{
+  "required_columns": [
+    "record_id",
+    "station_id",
+    "station_year_id",
+    "year",
+    "crop_label",
+    "sowing_doy",
+    "maturity_doy",
+    "crop_pred",
+    "sowing_pred",
+    "maturity_pred",
+    "synthetic_x",
+    "synthetic_y"
+  ],
+  "forbidden_public_columns": [
+    "latitude",
+    "longitude",
+    "lat",
+    "lon",
+    "station_name",
+    "site_name",
+    "admin_code",
+    "county",
+    "province"
+  ],
+  "public_id_prefix": "SYN_"
+}

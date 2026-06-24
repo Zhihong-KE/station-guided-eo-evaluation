@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "train_fraction": 0.7,
+  "validation_fraction": 0.15,
+  "test_fraction": 0.15,
+  "temporal_holdout_test_year": 2021,
+  "temporal_holdout_validation_year": 2020,
+  "support_density_bins": [0, 5, 10, 20, 1000000],
+  "distance_bins": [0, 10, 25, 50, 1000000],
+  "release_safety": {
+    "allow_real_station_ids": false,
+    "allow_latitude_longitude": false,
+    "allow_row_level_real_splits": false
+  }
+}

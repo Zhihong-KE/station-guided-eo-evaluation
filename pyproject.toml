@@ -1,0 +1,18 @@
+[project]
+name = "station-guided-eo-protocol-audit"
+version = "0.1.0"
+description = "Release-safe station-guided Earth observation protocol audit workflow."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

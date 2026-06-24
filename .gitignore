@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Restricted or private data must never be committed.
+data/raw/
+data/restricted/
+data/private/
+restricted/
+private/
+raw/
+secrets/
+credentials/
+
+# Real station/site artifacts and row-level outputs are blocked by default.
+*real*
+*restricted*
+*station_coordinates*
+*station_coords*
+*site_coordinates*
+*site_coords*
+*latitude*
+*longitude*
+*latlon*
+*lonlat*
+*真实*
+*站点*
+*坐标*
+
+# Large or row-level science artifacts.
+*.npz
+*.npy
+*.parquet
+*.feather
+*.tif
+*.tiff
+*.shp
+*.gpkg
+*.geojson
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+
+# Local scratch outputs.
+outputs/
+tmp/
+logs/
+invalid_files/
+
+# Generated figures are reproducible from scripts and are not required in Git.
+aggregate_manifests/figures/
+aggregate_manifests/synthetic_station_year_predictions_*.csv
+paper_assets/figures/

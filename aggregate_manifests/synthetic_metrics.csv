@@ -1,0 +1,13 @@
+protocol,split,metric_unit,n_station_years,crop_macro_f1,sowing_mae,maturity_mae,phenology_mae
+random_record_seed42,test,station_year,25,0.843407,4.5944,4.423,4.5087
+random_record_seed42,train,station_year,36,1.0,2.098194,3.136667,2.617431
+random_record_seed42,validation,station_year,27,0.705556,3.882593,5.105,4.493796
+station_isolated_seed42,test,station_year,6,1.0,3.2175,2.169167,2.693333
+station_isolated_seed42,train,station_year,24,1.0,1.556667,2.830625,2.193646
+station_isolated_seed42,validation,station_year,6,1.0,1.395833,1.468333,1.432083
+station_year_seed42,test,station_year,6,1.0,1.406667,2.496667,1.951667
+station_year_seed42,train,station_year,25,1.0,1.9926,2.5192,2.2559
+station_year_seed42,validation,station_year,5,1.0,1.357,2.36,1.8585
+temporal_holdout_2021,test,station_year,12,1.0,1.942083,3.1175,2.529792
+temporal_holdout_2021,train,station_year,12,1.0,1.998333,2.090833,2.044583
+temporal_holdout_2021,validation,station_year,12,1.0,1.479583,2.271667,1.875625

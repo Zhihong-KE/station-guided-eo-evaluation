@@ -1,0 +1,32 @@
+{
+  "release_scope": "synthetic aggregate demonstration",
+  "privacy_boundary": {
+    "row_level_real_data": "excluded",
+    "real_station_identifiers": "excluded",
+    "real_coordinates": "excluded",
+    "real_split_assignments": "excluded"
+  },
+  "tables": {
+    "metrics": {
+      "path": "aggregate_manifests/synthetic_metrics.csv",
+      "rows": 12,
+      "grain": "protocol x split x metric_unit"
+    },
+    "diagnostics": {
+      "path": "aggregate_manifests/synthetic_diagnostics.csv",
+      "rows": 34,
+      "grain": "protocol x split x diagnostic_bin"
+    }
+  },
+  "protocols": [
+    "random_record_seed42",
+    "station_isolated_seed42",
+    "station_year_seed42",
+    "temporal_holdout_2021"
+  ],
+  "splits": [
+    "test",
+    "train",
+    "validation"
+  ]
+}
