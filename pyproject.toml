@@ -1,7 +1,7 @@
 [project]
-name = "station-guided-eo-protocol-audit"
+name = "station-guided-eo-evaluation"
 version = "0.1.0"
-description = "Release-safe station-guided Earth observation protocol audit workflow."
+description = "Support-aware evaluation workflow for station-guided Earth observation."
 requires-python = ">=3.10"
 dependencies = [
   "numpy",

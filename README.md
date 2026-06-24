@@ -1,8 +1,22 @@
-# Station-Guided EO Protocol Audit
+# Support-Aware Evaluation for Station-Guided Earth Observation
 
-Release-safe workflow code for the station-guided Earth observation evaluation protocol described in the associated paper.
+Station-guided Earth observation studies often use sparse in-situ observations as labels for dense satellite records. This creates a subtle evaluation problem: one station-year label may supervise many satellite records, so the split unit, label support, record support, aggregation unit, metric population, and deployment claim can refer to different things.
 
-This repository contains scripts, schemas, synthetic examples, aggregate manifests, and figure/table builders for rebuilding the protocol logic. Source data are not included; users prepare inputs according to the schemas.
+This repository accompanies a study of that problem. The central question is not how to train a stronger crop-phenology model, but how to decide what an evaluation score can legitimately claim when sparse station labels are expanded into dense EO records.
+
+The project shows that random-record evaluation can substantially overstate spatial generalization, and that station holdout is necessary but not sufficient. Reliable unseen-location claims require support-aware reporting: the split design, label support, record support, station-year aggregation, metric population, support exposure, support density, and applicability diagnostics should be reported together.
+
+## Scientific Problem
+
+Sparse station observations and dense EO records live at different supports. When a station-year label is expanded into many satellite records, the training and test masks can separate records while still exposing the same station-year, the same station in other years, or dense local support conditions. A score can therefore look strong while answering a weaker question than unseen-location generalization.
+
+## Why It Matters
+
+Many EO and GeoAI studies report spatial generalization or unseen-location performance. If the split unit, label support, record support, aggregation unit, and metric population are not aligned, the reported score may measure record interpolation or dense-buffer weighting rather than performance at new stations. This affects how model accuracy, deployment claims, and benchmark comparisons should be interpreted.
+
+## Repository Scope
+
+This repository provides a release-safe, reproducible companion workflow for rebuilding the evaluation logic on synthetic examples and prepared aggregate inputs. It does not include source station observations, real station identifiers, coordinates, raw satellite records, or row-level real split files.
 
 ## What Is Included
 
@@ -10,7 +24,7 @@ This repository contains scripts, schemas, synthetic examples, aggregate manifes
 - Train/validation/test split generation for random-record, station-year, station-isolated, and temporal-holdout masks.
 - Station-year aggregation from record-level predictions.
 - Metric and diagnostic scripts for Macro-F1, phenology MAE, support-density bins, and applicability summaries.
-- Figure/table builders that consume aggregate manifests.
+- Figure/table builders that consume prepared aggregate inputs.
 - A synthetic toy dataset that follows the public schema.
 
 The included examples use invented `SYN_*` identifiers and synthetic grid coordinates. They are for executable schema demonstration only.
@@ -55,10 +69,10 @@ examples/                 Synthetic executable example data only.
 scripts/                  Protocol, metric, diagnostic, and figure/table scripts.
 aggregate_manifests/      Synthetic aggregate outputs for demonstration.
 tests/                    Unit tests for split, aggregation, and safety checks.
-docs/                     Data release policy and workflow notes.
+docs/                     Data preparation and workflow notes.
 paper_assets/             Paper table/figure scripts and input schemas.
 ```
 
 ## Citation
 
-If you use this workflow, cite the associated ACM SIGSPATIAL paper once it is publicly available.
+If you use this workflow, cite the associated paper once it is publicly available.
