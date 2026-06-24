@@ -58,3 +58,8 @@ invalid_files/
 aggregate_manifests/figures/
 aggregate_manifests/synthetic_station_year_predictions_*.csv
 paper_assets/figures/
+
+# Optional map inputs should be prepared locally and not committed by default.
+station_map_points.csv
+nearest_links.csv
+boundary_lines.csv

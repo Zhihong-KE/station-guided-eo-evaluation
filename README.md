@@ -1,6 +1,6 @@
 # Station-Guided EO Protocol Audit
 
-Release-safe workflow code for the station-guided Earth observation evaluation protocol described in the ACM SIGSPATIAL 2026 submission.
+Release-safe workflow code for the station-guided Earth observation evaluation protocol described in the associated paper.
 
 This repository contains scripts, schemas, synthetic examples, aggregate manifests, and figure/table builders for rebuilding the protocol logic. Source data are not included; users prepare inputs according to the schemas.
 
